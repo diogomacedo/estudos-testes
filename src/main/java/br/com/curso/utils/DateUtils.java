@@ -25,8 +25,13 @@ public class DateUtils {
 	}
 
 	public static boolean isMesmaData(Date data1, Date data2) {
-		if (data1.getDay() == data2.getDay() && data1.getMonth() == data2.getMonth()
-				&& data1.getYear() == data2.getYear()) {
+		Calendar calendar1 = Calendar.getInstance();
+		calendar1.setTime(data1);
+		Calendar calendar2 = Calendar.getInstance();
+		calendar2.setTime(data2);
+		if (calendar1.get(Calendar.DAY_OF_MONTH) == calendar2.get(Calendar.DAY_OF_MONTH) &&
+			calendar1.get(Calendar.MONTH) == calendar2.get(Calendar.MONTH) &&
+			calendar1.get(Calendar.YEAR) == calendar2.get(Calendar.YEAR)) {
 			return true;
 		}
 		return false;
