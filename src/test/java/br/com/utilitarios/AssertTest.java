@@ -1,5 +1,7 @@
 package br.com.utilitarios;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -30,6 +32,9 @@ public class AssertTest {
 
 		Assertions.assertNull(usuario0);
 		Assertions.assertNotNull(usuario1);
+
+		// Fluent Interface
+		MatcherAssert.assertThat(usuario1.getNome(), CoreMatchers.is("Max"));
 
 	}
 
