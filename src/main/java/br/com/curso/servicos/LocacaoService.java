@@ -9,7 +9,11 @@ import br.com.curso.utils.DateUtils;
 
 public class LocacaoService {
 
-	public Locacao alugarFilmes(Usuario usuario, Filme filme) {
+	public Locacao alugarFilmes(Usuario usuario, Filme filme) throws Exception {
+
+		if (filme.getEstoque() == 0) {
+			throw new Exception("O filme escolhido está sem estoque.");
+		}
 
 		Locacao locacao = new Locacao();
 

@@ -13,11 +13,11 @@ import br.com.curso.utils.DateUtils;
 public class LocacaoServiceTest {
 
 	@Test
-	public void teste() {
+	public void teste() throws Exception {
 
 		// Cenário
 		Usuario usuario = new Usuario("Diogo Macedo");
-		Filme filme = new Filme("Star Wars - Ataque dos Clones", 2, 5.50);
+		Filme filme = new Filme("Star Wars - Ataque dos Clones", 0, 5.50);
 
 		LocacaoService service = new LocacaoService();
 
