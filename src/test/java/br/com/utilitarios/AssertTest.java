@@ -1,11 +1,14 @@
 package br.com.utilitarios;
 
+import java.util.Calendar;
+
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import br.com.curso.entidades.Usuario;
+import br.com.curso.utils.MatchersUtils;
 
 public class AssertTest {
 
@@ -35,6 +38,9 @@ public class AssertTest {
 
 		// Fluent Interface
 		MatcherAssert.assertThat(usuario1.getNome(), CoreMatchers.is("Max"));
+		MatcherAssert.assertThat(usuario3.getNome(), CoreMatchers.is("Minduim"));
+		MatcherAssert.assertThat(Calendar.getInstance().getTime(), MatchersUtils.ehHojeComDiferencaDeDias(0));
+		MatcherAssert.assertThat(Calendar.getInstance().getTime(), MatchersUtils.ehHoje());
 
 	}
 
