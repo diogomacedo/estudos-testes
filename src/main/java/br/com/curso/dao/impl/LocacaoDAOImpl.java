@@ -7,7 +7,6 @@ public class LocacaoDAOImpl implements LocacaoDAO {
 
 	@Override
 	public void salvar(Locacao locacao) {
-		
 	}
 
 }
