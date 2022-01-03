@@ -6,16 +6,8 @@ public class FizzBuzz {
 
 		String result = null;
 
-		boolean multiplo3 = false;
-		boolean multiplo5 = false;
-
-		if (i % 3 == 0) {
-			multiplo3 = true;
-		}
-
-		if (i % 5 == 0) {
-			multiplo5 = true;
-		}
+		boolean multiplo3 = this.isMultiplo3(i);
+		boolean multiplo5 = this.isMultiplo5(i);
 
 		if (multiplo3 && multiplo5) {
 			result = "FizzBuzz";
@@ -29,6 +21,20 @@ public class FizzBuzz {
 
 		return result;
 
+	}
+
+	private boolean isMultiplo3(int i) {
+		if (i % 3 == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	private boolean isMultiplo5(int i) {
+		if (i % 5 == 0) {
+			return true;
+		}
+		return false;
 	}
 
 }
